@@ -1,0 +1,96 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Color clock</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="colorclock.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <style>
+        
+        body {
+            font-family: 'Open Sans Condensed', sans-serif;
+        }
+
+        #rainbow {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 20px;
+            
+            background: -moz-linear-gradient(left, #ff0000 0%, #ff00ff 16.66%, #0000ff 33.33%, #00ffff 50%, #00ff00 66.66%, #ffff00 83.33%, #ff0000 100%); /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, right top, color-stop(0%,#ff0000), color-stop(16.66%,#ff00ff), color-stop(33.33%,#0000ff), color-stop(50%,#00ffff), color-stop(66.66%,#00ff00), color-stop(83.33%,#ffff00), color-stop(100%,#ff0000)); /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(left, #ff0000 0%,#ff00ff 16.66%,#0000ff 33.33%,#00ffff 50%,#00ff00 66.66%,#ffff00 83.33%,#ff0000 100%); /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(left, #ff0000 0%,#ff00ff 16.66%,#0000ff 33.33%,#00ffff 50%,#00ff00 66.66%,#ffff00 83.33%,#ff0000 100%); /* Opera 11.10+ */
+            background: -ms-linear-gradient(left, #ff0000 0%,#ff00ff 16.66%,#0000ff 33.33%,#00ffff 50%,#00ff00 66.66%,#ffff00 83.33%,#ff0000 100%); /* IE10+ */
+            background: linear-gradient(to right, #ff0000 0%,#ff00ff 16.66%,#0000ff 33.33%,#00ffff 50%,#00ff00 66.66%,#ffff00 83.33%,#ff0000 100%); /* W3C */
+        }
+
+        h3   { margin: 0; padding: 0; font-size: 14px; }
+
+        #h00 { position: absolute; bottom: 0; left: 0%; }
+        #h01 { position: absolute; bottom: 0; left: 4.166%; }
+        #h02 { position: absolute; bottom: 0; left: 8.333%; }
+        #h03 { position: absolute; bottom: 0; left: 12.5%; }
+        #h04 { position: absolute; bottom: 0; left: 16.66%; }
+        #h05 { position: absolute; bottom: 0; left: 20.8%; }
+        #h06 { position: absolute; bottom: 0; left: 25%; }
+        #h07 { position: absolute; bottom: 0; left: 29%; }
+        #h08 { position: absolute; bottom: 0; left: 33.3%; }
+        #h09 { position: absolute; bottom: 0; left: 37.5%; }
+        #h10 { position: absolute; bottom: 0; left: 41.66%; }
+        #h11 { position: absolute; bottom: 0; left: 45.8%; }
+        #h12 { position: absolute; bottom: 0; left: 50%; }
+        #h13 { position: absolute; bottom: 0; left: 54.166%; }
+        #h14 { position: absolute; bottom: 0; left: 58.333%; }
+        #h15 { position: absolute; bottom: 0; left: 62.5%; }
+        #h16 { position: absolute; bottom: 0; left: 66.66%; }
+        #h17 { position: absolute; bottom: 0; left: 70.8%; }
+        #h18 { position: absolute; bottom: 0; left: 75%; }
+        #h19 { position: absolute; bottom: 0; left: 79%; }
+        #h20 { position: absolute; bottom: 0; left: 83.3%; }
+        #h21 { position: absolute; bottom: 0; left: 87.5%; }
+        #h22 { position: absolute; bottom: 0; left: 91.66%; }
+        #h23 { position: absolute; bottom: 0; left: 95.8%; }
+
+        #now { position: absolute; bottom: 0;
+            height: 20px;
+            border-left: 1px solid black;
+        }
+        
+    </style>
+</head>
+<body onload="startTime()">
+    <h1 id="clock"></h1>
+    <div id="rainbow">
+
+        <div id="now"></div>
+
+        <h3 id="h00">00</h3>
+        <h3 id="h01">01</h3>
+        <h3 id="h02">02</h3>
+        <h3 id="h03">03</h3>
+        <h3 id="h04">04</h3>
+        <h3 id="h05">05</h3>
+        <h3 id="h06">06</h3>
+        <h3 id="h07">07</h3>
+        <h3 id="h08">08</h3>
+        <h3 id="h09">09</h3>
+        <h3 id="h10">10</h3>
+        <h3 id="h11">11</h3>
+        <h3 id="h12">12</h3>
+        <h3 id="h13">13</h3>
+        <h3 id="h14">14</h3>
+        <h3 id="h15">15</h3>
+        <h3 id="h16">16</h3>
+        <h3 id="h17">17</h3>
+        <h3 id="h18">18</h3>
+        <h3 id="h19">19</h3>
+        <h3 id="h20">20</h3>
+        <h3 id="h21">21</h3>
+        <h3 id="h22">22</h3>
+        <h3 id="h23">23</h3>
+        
+    </div>
+</body>
+</html>
