@@ -86,6 +86,6 @@ function startTime() {
     $("body").css("background-color", rgbstring );
     $("#now").css("left", scaled*100 +"%");
 
-    setTimeout(function(){ startTime() }, 500);
+    setTimeout(function(){ startTime(); }, 500);
 }
 
